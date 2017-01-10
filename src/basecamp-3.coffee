@@ -6,7 +6,7 @@ catch
 
 class Basecamp3 extends Adapter
   send: (envelope, strings...) ->
-    message = strings.join "\n"
+    message = strings.join("\n").replace(/\n/g, "<br />");
 
     @robot.http(envelope.message.callback_url)
       .header('Content-Type', 'application/json')
