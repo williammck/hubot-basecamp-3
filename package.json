@@ -1,0 +1,21 @@
+{
+  "name": "hubot-basecamp-3",
+  "version": "1.0.0",
+  "description": "Basecamp 3 Campfire adapter for Hubot.",
+  "main": "src/basecamp-3.coffee",
+  "author": "William McKinnerney <me@williammck.net> (https://williammck.net)",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/williammck/hubot-basecamp-3.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "parent-require": "^1.0.0"
+  },
+  "peerDependencies": {
+    "hubot": ">=2.0"
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.2.0"
+  }
+}
