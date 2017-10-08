@@ -1,6 +1,6 @@
 {
   "name": "hubot-basecamp-3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Basecamp 3 Campfire adapter for Hubot.",
   "main": "src/basecamp-3.coffee",
   "author": "William McKinnerney <me@williammck.net> (https://williammck.net)",
