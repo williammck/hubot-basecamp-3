@@ -6,7 +6,7 @@ catch
 
 class Basecamp3 extends Adapter
   send: (envelope, strings...) ->
-    message = strings.join("\n").replace(/\n/g, "<br />");
+    message = strings.join('\n').replace(/\n/g, '<br />')
 
     @robot.http(envelope.message.callback_url)
       .header('Content-Type', 'application/json')
@@ -19,7 +19,9 @@ class Basecamp3 extends Adapter
 
   run: ->
     @robot.router.post "/hubot/bc3", (request, response) =>
-      user = new User request.body.creator.id, name: request.body.creator.name
+      user = new User request.body.creator.id,
+        name: request.body.creator.name,
+        room: request.body.creator.name
       text = @robot.name + ': ' + request.body.command
       message = new TextMessage user, text
       message.callback_url = request.body.callback_url
@@ -33,4 +35,3 @@ class Basecamp3 extends Adapter
 
 exports.use = (robot) ->
   new Basecamp3 robot
-
