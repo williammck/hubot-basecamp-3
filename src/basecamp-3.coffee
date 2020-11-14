@@ -5,6 +5,11 @@ catch
   {Robot, Adapter, TextMessage, User} = prequire 'hubot'
 
 class Basecamp3 extends Adapter
+
+constructor: (robot)->
+    super
+    @robot.logger.info "Constructor"
+
   send: (envelope, strings...) ->
     message = strings.join('\n').replace(/\n/g, '<br />')
 
@@ -33,5 +38,5 @@ class Basecamp3 extends Adapter
 
     @emit "connected"
 
-module.exports = (robot) ->
+exports.use = (robot) ->
   new Basecamp3 robot
