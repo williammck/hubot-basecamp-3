@@ -33,5 +33,5 @@ class Basecamp3 extends Adapter
 
     @emit "connected"
 
-exports.use = (robot) ->
+module.exports = (robot) ->
   new Basecamp3 robot
